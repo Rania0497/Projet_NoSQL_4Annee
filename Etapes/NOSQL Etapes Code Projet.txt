@@ -1,0 +1,55 @@
+1-
+python --version 
+Python 3.9.13
+
+2-
+pip install pymongo
+
+3-
+Voir si MongoDB Compass est pret avec les collections
+
+4-
+Créer un fichier queries.py dans VSCode
+
+5-Lancer le script dans le terminal
+python queries.py
+
+6-Django
+python -m django --version
+puis
+python -m django startproject race_platform
+puis
+cd race_platform
+puis 
+python manage.py startapp races
+puis
+Ouvre race_platform/settings.py
+Trouve INSTALLED_APPS et ajoute 'races', à la fin :
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    ...
+    'races',
+]
+puis 
+dans setting aussi modifier en STATIC_URL = '/static/'
+puis
+code dans races/views.py
+puis
+creer dossier races/templates/races et fichier index.html et y mettre code
+puis
+dans races creer fichiers urls.py et y mettre code
+puis
+Ouvre race_platform/urls.py puis ajouter from django.urls import path, include et path('', include('races.urls')),
+
+7-Lancer le serveur
+(attention : etre sur cd race_platform)
+python manage.py runserver
+
+
+
+-----Tu va modifier que
+races/views.py
+index.html
+
